@@ -16,15 +16,19 @@
 
       <ul class="nav-links">
         <li>
-          <a href="#about">Home</a>
+          <a href="#home">Home</a>
+        </li>
+        
+        <li>
+          <a href="#about">About</a>
         </li>
 
         <li>
-          <a href="#experience">Service</a>
+          <a href="#experience">Experience</a>
         </li>
 
         <li>
-          <a href="#projects">Project</a>
+          <a href="#service">Service</a>
         </li>
         
         <li>
@@ -32,13 +36,15 @@
         </li>
 
       </ul>
-      <button class="visit-btn" href="https://www.instagram.com/sapaahayoo._/profilecard/?igsh=Y2JhN25ya3BzejIz ">Visit Github</button>
+
+      <!-- Tombol visit github -->
+      <button class="visit-btn" onclick="document.location='https://github.com/muhammadkevinaditio'">Visit Github</button>
 
     </header>
 
-    <!-- section -->
-     <section id="about" class="about">
-      <div class="about-container">
+    <!-- Home -->
+     <section id="home" class="home">
+      <div class="home-container">
         <img src="img/WhatsApp Image 2024-12-24 at 19.11.02.jpeg" alt="">
       </div>
 
@@ -47,19 +53,30 @@
         <h1>Kevin Aditio</h1>
         <span>Student of universitas pasundan</span>
 
+        <!-- social media -->
         <div class="btn-group">
-        <div class="btn">Instagram</div>
-        <div class="btn">Contact</div>
+        <div class="btn" onclick="document.location='https://www.instagram.com/vinn__a/'">Instagram</div>
+        <div class="btn" onclick="document.location='https://wa.me/+6282218984400'">WhatsApp</div>
 
       </div>
       </div>
 
       </section>
 
-      <!-- About me (tentang saya) -->
+
+      <!-- About -->
+      <section class="about" id="about">
+        <h2 class="heading">About</h2>
+        <div class="about-content">
+          <p> Saya adalah mahasiswa Teknik Informatika di Universitas Pasundan yang memiliki minat terhadap dunia IT. Saya menguasai teknologi web modern seperti HTML, CSS, dan java script, serta memiliki kemampuan dalam mengoptimalkan antarmuka pengguna untuk meningkatkan pengalaman pengguna. Saya percaya bahwa desain yang baik menggabungkan fungsi dan estetika,
+          dan fokus saya adalah menciptakan website yang menarik, mudah digunakan, dan dapat diakses oleh semua orang.</p>
+        </div>
+      </section>
+
+      <!-- Pengalaman Pemograman -->
        <section id="experience" class="experience">
 
-        <h2 class="section-title">Service</h2>
+        <h2 class="section-title">Experience</h2>
 
         <div class="experience-info">
           <div class="grid">
@@ -93,9 +110,9 @@
 
        <!-- project -->
       
-       <section id="projects" class="projects">
+       <section id="service" class="projects">
 
-            <h2 class="section-title">Portofolio</h2>
+            <h2 class="section-title">Service</h2>
 
 
             <div class="projects-grid">
@@ -136,19 +153,41 @@
        </section>
 
       <!-- contact -->
-      <section class="contact" id="contact">
+       <form>
+        <h3>Contact Me</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <textarea id="message" rows="4" placeholder="how can we help you?" ></textarea>
+        <button type="submit">Submit</button>
+       </form>
+
+
+
+
+
+      <!-- <section class="contact" id="contact">
 
         <div class="input-box">
           <h2 class="section-title">Contact Me</h2>
 
           <div class="input">
-            <input type="text" placeholder="example@gmail.com">
+            <input type="text" placeholder="Your Name">
+          </div>
+          
+          <div class="input">
+            <input type="email" placeholder="example@gmail.com">
+          </div>
+          
+          <div class="input">
+          <input type="text" placeholder="Name Subject" name="name subject"/>
           </div>
 
+          
           <div class="btn">Submit</div>
         </div>
 
-      </section>
+      </section> -->
 
 
       <!-- footer site -->

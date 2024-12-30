@@ -78,24 +78,25 @@ li a:hover::before {
   transform: scale(1.03);
 }
 
+/* home section */
 section {
   min-height: 100vh;
   padding: 8rem 12%;
   width: 100%;
   position: relative;
 }
-.about {
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about .about-container {
+.home .home-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10rem;
 }
-.about img {
+.home img {
   width: 300px;
   height: 300px;
   border-radius: 60%;
@@ -143,6 +144,48 @@ section {
   color: white;
 }
 
+
+
+/* about section */
+.about {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.about-content h2 {
+  line-height: 1.2;
+}
+
+.about-content p{
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.about-content p:hover{
+  transform: scale(1.02);
+  background-color: black;
+  color: white;
+}
+
+
+
+
+/* Experience section */
 .section-title {
   text-align: center;
   font-size: 4rem;
@@ -158,7 +201,7 @@ section {
 }
 
 .experience img {
-  width: 15vw;
+  width: 10vw;
 }
 .grid {
   display: grid;
@@ -190,7 +233,7 @@ section {
   color: transparent;
 }
 
-/* project */
+/* Service project */
 
 .projects-grid {
   display: grid;
@@ -218,7 +261,7 @@ section {
 }
 
 .project-card img {
-  width: 40vw;
+  width: 20vw;
   border-radius: 1rem;
 }
 
@@ -236,19 +279,26 @@ section {
   font-weight: 500;
 }
 
+
+/* contact section */
 .input-box {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 5rem; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .input-box input {
   border-radius: 3rem;
-  border: 2px solid black;
-  padding: 2rem 8rem;
+  border: 3px solid black;
+  padding: 2rem 4rem;
   font-size: 3rem;
 }
 .input-box input::placeholder {
