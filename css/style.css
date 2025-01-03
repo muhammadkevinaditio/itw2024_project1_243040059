@@ -49,7 +49,7 @@ li a {
 }
 li a::before {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   left: 0;
   height: 5px;
@@ -61,7 +61,7 @@ li a::before {
 li a:hover::before {
   width: 100%;
 }
-.visit-btn {
+.visit-btn{
   padding: 0.9rem 1.6rem;
   border-radius: 3rem;
   border: none;
@@ -76,6 +76,11 @@ li a:hover::before {
 .visit-btn:hover {
   background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
   transform: scale(1.03);
+}
+
+#menu-icon {
+  font-size: 2rem;
+  display: none;
 }
 
 /* home section */
@@ -142,6 +147,7 @@ section {
 .btn:hover {
   background-color: black;
   color: white;
+  transform: translateY(-10px) scale(1.02);
 }
 
 
@@ -199,19 +205,15 @@ section {
   justify-content: center;
   gap: 5rem;
 }
-
-.experience img {
-  width: 10vw;
-}
 .grid {
   display: grid;
-  grid-template-columns: repeat(3fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
 }
 .grid-card {
   border: 2px solid black;
   border-radius: 0.5rem;
-  padding: 3rem;
+  padding: 6rem;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -224,6 +226,10 @@ section {
   background-color: black;
   color: white;
 }
+.grid-card i{
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
 
 .grid-card span {
   font-size: 1.5rem;
@@ -232,17 +238,24 @@ section {
   background-clip: text;
   color: transparent;
 }
-
-/* Service project */
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+::-webkit-scrollbar{
+  width: 20px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(219, 219, 219);
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, #009dff, #ff00ff);
 }
 
-.project-card {
-  padding: 3rem 2rem;
+/* Service project */
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+  gap: 2rem;
+}
+.project-card{
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,62 +264,75 @@ section {
   gap: 1.5rem;
   border: 2px solid black;
   border-radius: 3rem;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
 }
-.project-card:hover {
-  background-color: black;
-  color: white;
-  transform: translateY(-10px) scale(1.02);
-}
-
-.project-card img {
-  width: 20vw;
-  border-radius: 1rem;
-}
-
-.project-card:hover .btn {
-  border: 2px white;
-  color: white;
-}
-.project-card:hover .btn:hover {
-  border: 2px solid white;
-  background-color: white;
-  color: black;
+.project-card img{
+  width: 25vw;
 }
 .project-card h3 {
   font-size: 2rem;
   font-weight: 500;
-}
-
+} 
 
 /* contact section */
-.input-box {
-  /* display: flex;
+.section-title{
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2rem;
-  margin-top: 5rem; */
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.input-box {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.input-box input {
-  border-radius: 3rem;
-  border: 3px solid black;
-  padding: 2rem 4rem;
-  font-size: 3rem;
+
+form{
+  border: 2px solid black;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
 }
-.input-box input::placeholder {
-  font-size: 3rem;
+form h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #009dff;
+  margin-bottom: 20px;
 }
 
-.input {
-  position: relative;
+form input, form textarea{
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+}
+
+form button{
+  border-radius: 3rem;
+  background: white;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 20px auto 0;
+  text-wrap: nowrap;
+  transition: 0.2s ease-in-out;
+}
+
+form button:hover{
+  background-color: black;
+  color: white;
+  transform: translateY(-10px) scale(1.02);
 }
 
 /* footer style */
@@ -334,3 +360,108 @@ footer ul li a {
 .copyright {
   font-size: 300;
 }
+
+/* rensponsive */
+
+@media(max-width:1280px){
+   header{
+      padding: 1rem 2rem;
+      gap: 2rem;
+   }
+   .home .home-container{
+      gap: 3rem;
+   }
+   .experience-info{
+    flex-direction: column;
+   }
+}
+.input-box input{
+  padding: 2rem 5rem;
+  font-size: 2.5rem;
+}
+.input input::placeholder{
+  font-size: 2.5rem;
+}
+.input-box i{
+  font-size: 2.5rem;
+}
+
+@media(max-width:768px){
+  header{
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+  header .logo{
+    font-size: 1rem;
+  }
+  header .visit-btn{
+    display: none;
+  }
+  .home-container{
+    flex-direction: column;
+  }
+  .input-box input {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+  .input-box input::placeholder{
+    font-size: 1.5rem;
+  }
+  .input-box i{
+    display: none;
+  }
+  .grid{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+}
+
+@media(max-width:600px){
+    header #menu-icon{
+      display: block;
+    }
+    .nav-links{
+      position: absolute;
+      top: 100%;
+      margin-top: 1rem;
+      width: 100%;
+      padding: 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 3rem;
+      display: none;
+    }
+    .nav-links li{
+      margin-top: 1.5rem;
+      padding: 1rem;
+    }
+    .nav-links.active{
+      display: block;
+    }
+    header{
+      padding: 1rem 5rem;
+      gap: 8rem;
+    }
+    header .logo{
+      font-size: 1.5rem;
+    }
+
+    .about-home img{
+      width: 50vw;
+    }
+    .input-box input{
+      padding: 0.5rem 3rem;
+      width: 80%;
+      font-size: 1.5rem;
+    }
+    .input-box input::placeholder{
+      font-size: 1.5rem;
+    }
+    footer ul{
+      gap: 1rem;
+    }
+}
+

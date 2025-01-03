@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio</title>
 
-    <!-- link css -->
+    <!-- link css/icon box -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
   
   </head>
   <body>
@@ -37,7 +39,9 @@
 
       </ul>
 
-      <!-- Tombol visit github -->
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </div>
+
       <button class="visit-btn" onclick="document.location='https://github.com/muhammadkevinaditio'">Visit Github</button>
 
     </header>
@@ -52,8 +56,6 @@
         <h3>Hi, i'm</h3>
         <h1>Kevin Aditio</h1>
         <span>Student of universitas pasundan</span>
-
-        <!-- social media -->
         <div class="btn-group">
         <div class="btn" onclick="document.location='https://www.instagram.com/vinn__a/'">Instagram</div>
         <div class="btn" onclick="document.location='https://wa.me/+6282218984400'">WhatsApp</div>
@@ -81,7 +83,7 @@
         <div class="experience-info">
           <div class="grid">
             <div class="grid-card">
-                <img src="img/html-5_919827.png" alt="">
+                <i class="fa-brands fa-html5"></i>
                 <span>HTML</span>
                 <h3>skill:</h3>
                 <p>Menguasai struktur dasar pembuatan website dengan HTML.</p>
@@ -89,106 +91,84 @@
           </div>
           <div class="grid">
             <div class="grid-card">
-                <img src="img/css_919826.png" alt="">
-                <span>CSS </span>
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
                 <h3>Skill:</h3>
                 <p>Terampil dalam merancang tampilan website menggunakan CSS</p>
             </div>
           </div>
           <div class="grid">
             <div class="grid-card">
-                <img src="img/file_16425686.png" alt="">
+                <i class="fa-brands fa-js"></i>
                 <span>JAVA SCRIPT</span>
                 <h3>Skill:</h3>
-                <p>Bahasa pemrograman yang digunakan developer untuk membuat halaman web yang interaktif</p>
+                <p> membuat halaman web yang interaktif menggunakan JS</p>
             </div>
-          </div>
-
+            </div>
         </div>
        </section>
      
 
        <!-- project -->
-      
+
        <section id="service" class="projects">
 
-            <h2 class="section-title">Service</h2>
+          <h2 class="section-title">Service</h2>
 
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <img src="img/project 1.png" alt="">
+            <h3>Web Shop</h3>
+            <p>web merch yang saya buat untuk tugas mata kuliah ITW ke 7</p>
+            <div class="btn-group">
+              <div class="btn">Github Repo</div>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+
+            <div class="project-card">
+              <img src="img/project2.png" alt="">
+              <h3>Web Shop</h3>
+              <p>web merch yang saya buat untuk tugas mata kuliah ITW ke 7</p>
+              <div class="btn-group">
+                <div class="btn">Github Repo</div>
+              </div>
+            </div>
 
             <div class="projects-grid">
+
               <div class="project-card">
-                <img src="img/project 1.png" alt="">
+                <img src="img/project3.png" alt="">
                 <h3>Web Shop</h3>
                 <p>web merch yang saya buat untuk tugas mata kuliah ITW ke 7</p>
                 <div class="btn-group">
-                  <div class="btn" onclick="location">Github Repo</div>
-                  
-                </div>
-              </div>
-            </div>
-              
-            
-            <div class="project-card">
-                <img src="img/project2.png" alt="">
-                <h3>Web gallery</h3>
-                <p>Web animasi lightbox yang saya buat untuk tugas mata kuliah ITW ke 5 </p>
-                <div class="btn-group">
                   <div class="btn">Github Repo</div>
                 </div>
               </div>
-            </div>
-           
-           
-            <div class="project-card">
-                <img src="img/project3.png" alt="">
-                <h3>Web Artikel</h3>
-                <p>web artikel yang saya buat untuk tugas mata kuliah ITW ke 4</p>
-                <div class="btn-group">
-                  <div class="btn">Github Repo</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+     </section>
 
-       </section>
+
 
       <!-- contact -->
-       <form>
-        <h3>Contact Me</h3>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
-        <textarea id="message" rows="4" placeholder="how can we help you?" ></textarea>
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+      <div class="input-box">
+
+       <form action="https://api.web3forms.com/submit" method="POST">
+        <h3>Type Here!</h3>
+        <input type="hidden" name="access_key" value="805e66c7-bf47-49ea-98c7-7aac3a3677a2">
+        <input name="nama" type="text" id="name" placeholder="Your Name" required >
+        <input name="email"   type="email" id="email" placeholder="Your Email" required >
+        <input name="nomor" type="text" id="phone" placeholder="Phone Number" required >
+        <textarea name="pesan" id="message" rows="4" placeholder="how can we help you?"></textarea>
         <button type="submit">Submit</button>
        </form>
-
-
-
-
-
-      <!-- <section class="contact" id="contact">
-
-        <div class="input-box">
-          <h2 class="section-title">Contact Me</h2>
-
-          <div class="input">
-            <input type="text" placeholder="Your Name">
-          </div>
-          
-          <div class="input">
-            <input type="email" placeholder="example@gmail.com">
-          </div>
-          
-          <div class="input">
-          <input type="text" placeholder="Name Subject" name="name subject"/>
-          </div>
-
-          
-          <div class="btn">Submit</div>
-        </div>
-
-      </section> -->
-
+      </div>
+    </section>
 
       <!-- footer site -->
       <footer>
@@ -213,9 +193,8 @@
         <p class="copyright">© All Rights Reserved  | Muhammad kevin aditio</p>
       </footer>
 
+      <!-- send message script -->
+    <script src="js/script.js"></script>
 
-
-
-    <script src="/js/script.js"></script>
   </body>
 </html>
